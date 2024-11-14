@@ -5,9 +5,9 @@
 
 with open ('zoo.py', 'w') as f:
     f.write("""
-            def hours():
-            print ('Opem 9-5 daily')
-            """)
+def hours():
+    print ('Opem 9-5 daily')
+""")
 import zoo 
 zoo.hours()
 import zoo as menagerie
