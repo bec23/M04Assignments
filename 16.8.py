@@ -6,7 +6,7 @@ conn = sqlite3.connect ('books.db')
 cursor = conn.cursor()
 
 cursor.execute('''
-CREATE TABLE books (titel TEXT, author TEXT, year INTEGER)
+CREATE TABLE books (title TEXT, author TEXT, year INTEGER)
 ''')
 
 conn.commit()
@@ -29,5 +29,5 @@ results= connection.execute(stmt).fetchall()
 
 for row in results:
     print(row.title)
-    
+
 connection.close()
