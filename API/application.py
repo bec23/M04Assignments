@@ -44,4 +44,4 @@ def delete_book(id):
         return{"error": "not found"}
     db.session.delete(book)
     db.session.commit()
-    return {"message": "YAY!!!"}
+    return {"message": "BYE BYE!!!"}
