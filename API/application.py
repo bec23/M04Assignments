@@ -11,11 +11,13 @@ class Book(db.Model):
     author = db.Column(db.String(120), nullable=False) 
     publisher = db.Column(db.String(120), nullable=False) 
     
-    def to_dict(self): 
+    def __repr__(self): 
         return { 
             'id': self.id, 
             'book_name': self.book_name, 
             'author': self.author, 
             'publisher': self.publisher 
             }
-    
+@app.route('/Books')
+def get_books():
+    books=Book.query.all()
